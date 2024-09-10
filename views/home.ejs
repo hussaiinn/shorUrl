@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Genrate a Short url</h1>
+
+    <form action="/url" method="POST">
+        <input type="text" name="url" placeholder="Enter Your URL">
+        <button type="submit">Generate URL</button>
+    </form>
+    <% if (locals.id) { %>
+        <p>Short URL: <a href="/url/<%= id %>"><%= id %></a>
+    <% } %>
+  </body>
+</html>
