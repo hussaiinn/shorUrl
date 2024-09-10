@@ -6,7 +6,7 @@ const Urlss = require("./models/url");
 const path = require("path");
 const PORT = 4001;
 
-connectDb("mongodb://127.0.0.1:27017/Urls");
+connectDb(process.env.MONGODB_URL ?? "mongodb://127.0.0.1:27017/Urls");
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 app.use(express.json());
